@@ -38,6 +38,9 @@ jobs:
           cp RawPrintPlugin.java android/app/src/main/java/com/chekhoff/print/
           cp MainActivity.java android/app/src/main/java/com/chekhoff/print/
 
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
       - name: Set app icon
         run: |
           RES=android/app/src/main/res
